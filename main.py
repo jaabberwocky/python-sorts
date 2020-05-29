@@ -12,8 +12,8 @@ class Sort(ABC):
                 raise ValueError('Data has length of zero.')
             try:
                 self._data = [int(d) for d in data]
-            except:
-                raise ValueError('Not all elements are integers.')
+            except Exception as e:
+                raise ValueError(f'{e}. Not all elements are integers.')
         else:
             raise ValueError('Input provided is not a list.')
 
@@ -31,11 +31,10 @@ class BubbleSort(Sort):
         super().__init__()
 
     def sort(self):
-        n = len(self._data) 
+        n = len(self._data)
         if n == 1:
             return
-         
-        for i in range(n-1): 
-            for j in range(0, n-i-1): 
-                if self._data[j] > self._data[j+1] : 
-                    self._data[j], self._data[j+1] = self._data[j+1], self._data[j] 
+        for i in range(n-1):
+            for j in range(0, n-i-1):
+                if self._data[j] > self._data[j+1]:
+                    self._data[j], self._data[j+1] = self._data[j+1], self._data[j] # noqa

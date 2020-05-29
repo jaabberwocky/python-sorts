@@ -45,7 +45,7 @@ def test_bubblesort_6(sort_obj):
     with pytest.raises(ValueError):
         sort_obj.set_data(data)
 
-def test_bubblesort_6(sort_obj):
+def test_bubblesort_7(sort_obj):
     data = list(range(1000,0,-1))
     sort_obj.set_data(data)
     sort_obj.sort()
