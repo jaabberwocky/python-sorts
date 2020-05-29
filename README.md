@@ -1,6 +1,6 @@
 # Implementations of popular sorting algorithms in Python
 
-Done for practice.
+Done for algorithms practice.
 
 ### Current implementations
 
