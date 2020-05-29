@@ -38,3 +38,9 @@ def test_bubblesort_5(sort_obj):
     data = 'James'
     with pytest.raises(ValueError):
         sort_obj.set_data(data)
+
+
+def test_bubblesort_6(sort_obj):
+    data = None
+    with pytest.raises(ValueError):
+        sort_obj.set_data(data)
